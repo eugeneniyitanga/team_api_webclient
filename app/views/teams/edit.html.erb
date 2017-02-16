@@ -1,0 +1,18 @@
+<h1>Update Employee</h1>
+ 
+  <%= form_tag "/teams/#{@team['id']}", method: :patch do %>
+ 
+    <%= label_tag :creature %>
+    <%= text_field_tag :creature, @team['creature'] %>
+  
+    <%= label_tag :name %>
+    <%= text_field_tag :name, @team['name'] %>
+  
+    <%= label_tag :state %>
+    <%= text_field_tag :state, @team['state'] %>
+
+        <%= label_tag :sport %>
+    <%= text_field_tag :sport, @team['sport'] %>
+  
+    <%= submit_tag "Update Team" %>
+  <% end %> 

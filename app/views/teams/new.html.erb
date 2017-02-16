@@ -1,0 +1,17 @@
+<h1>Create Team</h1>
+ 
+ <%= form_tag "/teams", method: :post do %>
+   <%= label_tag :creature %>
+   <%= text_field_tag :creature %>
+ 
+   <%= label_tag :name %>
+   <%= text_field_tag :name %>
+ 
+   <%= label_tag :state %>
+   <%= text_field_tag :state %>
+
+  <%= label_tag :sport %>
+   <%= text_field_tag :sport %>
+ 
+   <%= submit_tag "Create Team" %>
+ <% end %> 
