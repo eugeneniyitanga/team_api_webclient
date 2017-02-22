@@ -32,7 +32,7 @@ class Team
   end 
 
   def destroy 
-    team_hash = Unirest.delete("#{ENV['DOMAIN']}/teams/#{id}.json").body
+    team_hash = Unirest.delete("#{ENV['DOMAIN']}/teams/#{id}.json", :headers => {"Accept"=> "application/json", "Authorization"=> "Token token=#{ENV['API_KEY']}", "X-User-Email"=> ENV['API_EMAIL']}).body
   end 
 
   def edit(id)
